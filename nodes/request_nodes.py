@@ -23,7 +23,7 @@ class FileToKeyValue:
 
     RETURN_TYPES = ("KEY_VALUE",)
     FUNCTION = "convert"
-    CATEGORY = "RequestNode/Utils"
+    CATEGORY = "LiveNodes/RequestNode/Utils"
 
     def convert(self, key_value, file_path, key_name, fail_on_error: bool = False):
         if not isinstance(key_value, dict):
