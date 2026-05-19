@@ -2,11 +2,7 @@
 """
 与请求有关的节点
 """
-import folder_paths
-from PIL import Image
-import io
 import os
-import json
 
 
 class FileToKeyValue:
@@ -14,9 +10,11 @@ class FileToKeyValue:
     def INPUT_TYPES(cls):
         return {
             "required": {
-                'key_value': ('KEY_VALUE', {'default': dict()}),
                 "file_path": ("STRING", {'default': ''}),
                 "key_name": ("STRING", {"default": ""}),
+            },
+            'optional': {
+                'key_value': ('KEY_VALUE', {'default': None}),
                 'fail_on_error': ('BOOLEAN', {'default': False})
             }
         }
@@ -25,7 +23,7 @@ class FileToKeyValue:
     FUNCTION = "convert"
     CATEGORY = "LiveNodes/RequestNode/Utils"
 
-    def convert(self, key_value, file_path, key_name, fail_on_error: bool = False):
+    def convert(self, file_path, key_name, key_value: dict = None, fail_on_error: bool = False):
         if not isinstance(key_value, dict):
             key_value = {}
 
