@@ -2,11 +2,11 @@ from .nodes.request_nodes import FileToKeyValue
 
 
 NODE_CLASS_MAPPINGS = {
-    "FileToKeyValue": FileToKeyValue,
+    # "FileToKeyValue": FileToKeyValue,
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
-    "FileToKeyValue": "File to KeyValue",
+    # "FileToKeyValue": "File to KeyValue",
 }
 
 # 告诉 ComfyUI 前端资源所在的目录

@@ -6,6 +6,9 @@ import os
 
 
 class FileToKeyValue:
+    """
+    Deprecated：文件描述付会过早关闭，这种方式不靠谱
+    """
     @classmethod
     def INPUT_TYPES(cls):
         return {
